@@ -1,0 +1,7 @@
+USE bd3;
+Select * from products;
+Select name, phone from shippers;
+Select avg(price), max(price), min(price) from products;
+Select distinct category_id, price from products order by price desc limit 10;
+Select count(id) from products where price >= 20 and price <= 100;
+Select supplier_id, count(id), avg(price) from products group by supplier_id;
